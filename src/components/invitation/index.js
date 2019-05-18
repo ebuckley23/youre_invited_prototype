@@ -129,8 +129,7 @@ export default class Invitation extends React.PureComponent {
             </Tabs>
           </TabsContainer>
         </Paper>
-        {submitted ? <div>{`Thank you ${this.state.with} for submitting your response!`}</div> :
-        <Button onClick={this._onSubmit} primary raised>Submit!</Button>}
+        <Button onClick={this._onSubmit} primary raised>Submit!</Button>
       </div>
     )
   }

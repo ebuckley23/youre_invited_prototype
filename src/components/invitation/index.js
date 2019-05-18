@@ -5,6 +5,7 @@ import Suggestions from './suggestions';
 import Misc from './misc';
 
 const DEFAULT_STATE = {
+  _id: '',
   my_pic_url: '',
   intro_message: '',
   with: '',
@@ -61,7 +62,7 @@ export default class Invitation extends React.PureComponent {
 
   _onSubmit = async () => {
     try {
-      const response = await fetch('/api/invitations', {
+      const response = await fetch(`/api/invitations/${this.state._id}`, {
         method: 'PUT',
         headers: {
           'content-type': 'application/json'

@@ -14,6 +14,7 @@ class InvitationServices {
   }
 
   async updateInvitation(id, payload) {
+    console.log('id', id);
     try {
       payload.submitted = true;
       const ret = await my_date.findByIdAndUpdate(id, payload, {new: true});

@@ -8,7 +8,7 @@ router.get('/:invitationId', async (req, res) => {
 })
 
 router.put('/:id', async (req, res) => {
-  const ret = await invitationsService.updateInvitation(req.params.invitationId, req.body);
+  const ret = await invitationsService.updateInvitation(req.params.id, req.body);
   res.json(ret);
 })
 
